@@ -7,12 +7,6 @@ public class Monster implements Serializable {
     private int health;
     private Cave cave;
 
-    public Monster(String type, int health, Cave cave) {
-        this.type = type;
-        this.health = health;
-        this.cave = cave;
-    }
-
     public Monster(String type, int health) {
         this.type = type;
         this.health = health;

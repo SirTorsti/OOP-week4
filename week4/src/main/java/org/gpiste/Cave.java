@@ -32,7 +32,7 @@ public class Cave implements Serializable{
         } else {
             System.out.println("Luolan hirviöt:");
             for (int i = 0; i < monsters.size(); i++) {
-                monsters.get(i).printInfo(i + 1);
+                System.out.println((i + 1) + ": " + monsters.get(i).getType() + " / " + monsters.get(i).getHealth() + "HP");
             }
         }
     }
