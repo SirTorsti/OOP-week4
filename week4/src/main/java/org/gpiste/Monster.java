@@ -41,6 +41,6 @@ public class Monster implements Serializable {
     }
 
     public void printInfo(int index) {
-        System.out.println(index + ": " + type + "/" + health + "HP");
+        System.out.println(index + ": " + type + " / " + health + "HP");
     }
 }
