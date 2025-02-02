@@ -6,6 +6,7 @@ public class Monster implements Serializable {
     private String type;
     private int health;
     private Cave cave;
+
     public Monster(String type, int health, Cave cave) {
         this.type = type;
         this.health = health;
@@ -25,20 +26,24 @@ public class Monster implements Serializable {
         return health;
     }
 
+    public void setCave(Cave cave) {
+        this.cave = cave;
+    }
+
     public void takeDamage(int dmg) {
         health -= dmg;
         if (health < 0) {
             health = 0;
         }
         if (health == 0) {
-            System.out.println(type + " kuoli");
+            System.out.println(type + " on kuollut.");
             cave.deleteMonster(this);
         } else {
             System.out.println("Hirviöllä on " + health + " elämää jäljellä.");
         }
     }
 
-    public void printInfo() {
-        System.out.println(type + "/" + health + "HP");
+    public void printInfo(int index) {
+        System.out.println(index + ": " + type + "/" + health + "HP");
     }
 }
