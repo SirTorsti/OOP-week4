@@ -53,12 +53,12 @@ public class App
 
                 case 4:
                     System.out.println("Anna tiedoston nimi, johon peli tallentaa: ");
-                    String filename = sc.nextLine();
-                    cave.saveGame(filename);
+                    String saveFilename = sc.nextLine();
+                    cave.saveGame(saveFilename);
                     break;
 
                 case 5:
-                    System.out.println("Anna tiedoston nimi, josta peli ladataan:");
+                    System.out.println("Anna tiedoston nimi, josta peli ladataan: ");
                     String loadFilename = sc.nextLine();
                     Cave loadedCave = Cave.loadGame(loadFilename);
                     if (loadedCave != null) {
@@ -70,6 +70,10 @@ public class App
                 case 0:
                     System.out.println("Peli päättyy. Kiitos pelaamisesta!");
                     exit = true;
+                    break;
+
+                default:
+                    System.out.println("Virheellinen valinta.");
                     break;
             }
         }
