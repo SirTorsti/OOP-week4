@@ -26,13 +26,21 @@ public class Cave implements Serializable{
         monsters.remove(monster);
     }
 
-    public void listMonsters(boolean showHeader) {
+    public void listMonsters() {
         if (monsters.isEmpty()) {
             System.out.println("Luola on tyhjä.");
         } else {
-            if(showHeader) {
-                System.out.println("Luolan hirviöt:");
+            System.out.println("Luolan hirviöt:");
+            for (int i = 0; i < monsters.size(); i++) {
+                System.out.println((i + 1) + ": " + monsters.get(i).getType() + " / " + monsters.get(i).getHealth() + "HP");
             }
+        }
+    }
+
+    public void listMonstersWithoutHeader() {
+        if (monsters.isEmpty()) {
+            System.out.println("Luola on tyhjä.");
+        } else {
             for (int i = 0; i < monsters.size(); i++) {
                 System.out.println((i + 1) + ": " + monsters.get(i).getType() + " / " + monsters.get(i).getHealth() + "HP");
             }
