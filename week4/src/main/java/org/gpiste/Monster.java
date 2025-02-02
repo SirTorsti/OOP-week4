@@ -32,11 +32,8 @@ public class Monster implements Serializable {
 
     public void takeDamage(int dmg) {
         health -= dmg;
-        if (health < 0) {
-            health = 0;
-        }
-        if (health == 0) {
-            System.out.println(type + " on kuollut.");
+        if (health <= 0) {
+            System.out.println(type + " on kuollut!");
             cave.deleteMonster(this);
         } else {
             System.out.println("Hirviöllä on " + health + " elämää jäljellä.");
