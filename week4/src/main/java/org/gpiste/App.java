@@ -35,13 +35,13 @@ public class App
                     break;
 
                 case 2:
-                System.out.println("Luolan hirviöt: ");
-                    cave.listMonsters();
+                    System.out.println("Luolan hirviöt: ");
+                    cave.listMonsters(true);
                     break;
 
                 case 3:
                     System.out.println("Valitse hirviö, johon hyökätä: ");
-                    cave.listMonsters();
+                    cave.listMonsters(false);
                     int choice = Integer.parseInt(sc.nextLine());
                     if (choice > 0 && choice <= cave.getMonsters().size()) {
                         Monster targetMonster = cave.getMonsters().get(choice - 1);
