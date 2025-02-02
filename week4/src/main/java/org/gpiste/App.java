@@ -19,7 +19,7 @@ public class App
         boolean exit = false;
         
         while (!exit) {
-            System.out.println("1) Lisää luolaan hirviö\n2)Listaa hirviöt\n3)Hyökkää hirviöön\n4)Tallenna peli\n5)Lataa peli\n0)Lopeta peli");
+            System.out.println("1) Lisää luolaan hirviö\n2) Listaa hirviöt\n3) Hyökkää hirviöön\n4) Tallenna peli\n5) Lataa peli\n0) Lopeta peli");
             int i = 0;
             String stringInput = sc.nextLine();
             i = Integer.parseInt(stringInput);
