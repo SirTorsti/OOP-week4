@@ -35,8 +35,6 @@ public class Monster implements Serializable {
         if (health <= 0) {
             System.out.println(type + " on kuollut!");
             cave.deleteMonster(this);
-        } else {
-            System.out.println("Hirviöllä on " + health + " elämää jäljellä.");
         }
     }
 
